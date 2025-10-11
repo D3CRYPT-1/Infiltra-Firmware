@@ -1,0 +1,18 @@
+{
+  "name": "Infiltra",
+  "version": "1.0.0",
+  "description": "Infiltra main firmware",
+  "keywords": "esp32, m5stack, cardputer",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "authors": [
+    {
+      "name": "Infiltra Team"
+    }
+  ],
+  "license": "MIT",
+  "frameworks": "arduino",
+  "platforms": "espressif32"
+}

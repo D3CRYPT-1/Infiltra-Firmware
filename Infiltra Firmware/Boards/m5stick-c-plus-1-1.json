@@ -1,0 +1,98 @@
+{
+  "name": "M5StickC-PLUS-1.1",
+  "url": "https://docs.m5stack.com/en/core/m5stickc_plus",
+  "vendor": "M5Stack",
+  "frameworks": ["arduino"],
+  "connectivity": ["wifi", "bluetooth"],
+
+  "build": {
+    "core": "esp32",
+    "mcu": "esp32",
+    "variant": "esp32",
+    "f_cpu": "240000000L",
+    "f_flash": "40000000L",
+    "flash_mode": "qio",
+    "partitions": "no_ota.csv",
+
+    "extra_flags": [
+      "-DM5STICK_C_PLUS_1_1",
+
+      "-DBTN_A_PIN=37",
+      "-DBTN_B_PIN=39",
+      "-DBTN_C_PIN=0",
+
+      "-DIR_TX_PIN=19",
+      "-DIR_RX_PIN=33",
+      "-DGROOVE_RX_PIN=33",
+
+      "-DUSER_SETUP_LOADED=1",
+      "-DST7789_2_DRIVER=1",
+      "-DTFT_RGB_ORDER=1",
+      "-DTFT_WIDTH=135",
+      "-DTFT_HEIGHT=240",
+      "-DTFT_BACKLIGHT_ON=0",
+      "-DTFT_CS=5",
+      "-DTFT_DC=23",
+      "-DTFT_RST=18",
+      "-DTOUCH_CS=-1",
+      "-DTFT_MOSI=15",
+      "-DTFT_SCLK=13",
+      "-DTFT_BL=-1",
+      "-DLOAD_GLCD=1",     
+      "-DLOAD_FONT2=1",
+      "-DSPI_FREQUENCY=20000000",
+      "-DSPI_READ_FREQUENCY=20000000",
+      "-DSPI_TOUCH_FREQUENCY=2500000"
+    ]
+  },
+
+  "upload": {
+    "maximum_size": 4194304,
+    "maximum_ram_size": 327680,
+    "flash_size": "4MB",
+    "speed": 115200,
+    "require_upload_port": true,
+    "before_reset": "default_reset",
+    "after_reset": "hard_reset"
+  },
+
+  "monitor": { "speed": 115200 },
+  "pin_configs": {
+    "ir_pins": {
+      "tx_options": [
+        { "name": "Default", "pin": 19, "description": "Default IR TX pin" },
+        { "name": "GPIO 26", "pin": 26, "description": "GPIO 26" },
+        { "name": "GPIO 36/25", "pin": 25, "description": "GPIO 25 (alternative to 36)" },
+        { "name": "Grove 32", "pin": 32, "description": "Grove port pin 32" },
+        { "name": "Grove 33", "pin": 33, "description": "Grove port pin 33" },
+        { "name": "M5 IR Mod", "pin": 32, "description": "M5 IR Module TX (Grove 32)" }
+      ],
+      "rx_options": [
+        { "name": "Default", "pin": 33, "description": "Default IR RX pin" },
+        { "name": "GPIO 26", "pin": 26, "description": "GPIO 26" },
+        { "name": "GPIO 36/25", "pin": 25, "description": "GPIO 25 (alternative to 36)" },
+        { "name": "Grove 32", "pin": 32, "description": "Grove port pin 32" },
+        { "name": "Grove 33", "pin": 33, "description": "Grove port pin 33" },
+        { "name": "M5 IR Mod", "pin": 33, "description": "M5 IR Module RX (Grove 33)" }
+      ]
+    },
+    "rf_pins": {
+      "tx_options": [
+        { "name": "Default", "pin": 19, "description": "Default RF TX pin" },
+        { "name": "GPIO 26", "pin": 26, "description": "GPIO 26" },
+        { "name": "GPIO 36/25", "pin": 25, "description": "GPIO 25 (alternative to 36)" },
+        { "name": "Grove 32", "pin": 32, "description": "Grove port pin 32" },
+        { "name": "Grove 33", "pin": 33, "description": "Grove port pin 33" },
+        { "name": "M5 RF Mod", "pin": 32, "description": "M5 RF Module TX (Grove 32)" }
+      ],
+      "rx_options": [
+        { "name": "Default", "pin": 33, "description": "Default RF RX pin" },
+        { "name": "GPIO 26", "pin": 26, "description": "GPIO 26" },
+        { "name": "GPIO 36/25", "pin": 25, "description": "GPIO 25 (alternative to 36)" },
+        { "name": "Grove 32", "pin": 32, "description": "Grove port pin 32" },
+        { "name": "Grove 33", "pin": 33, "description": "Grove port pin 33" },
+        { "name": "M5 RF Mod", "pin": 33, "description": "M5 RF Module RX (Grove 33)" }
+      ]
+    }
+  }
+}

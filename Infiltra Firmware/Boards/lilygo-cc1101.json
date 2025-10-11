@@ -1,0 +1,107 @@
+{
+  "name": "LilyGo T-Embed CC1101 (ESP32-S3)",
+  "url": "https://lilygo.cc/products/t-embed-cc1101",
+  "vendor": "LilyGo",
+  "frameworks": ["arduino"],
+  "connectivity": ["wifi", "bluetooth", "lora"],
+  "build": {
+    "core": "esp32",
+    "mcu": "esp32s3",
+    "variant": "esp32s3",
+    "f_cpu": "240000000L",
+    "f_flash": "80000000L",
+    "flash_mode": "qio",
+    "partitions": "huge_app.csv",
+    "extra_flags": [
+      "-DT_EMBED_1101",
+      "-DLILYGO_T_EMBED_CC1101",
+      "-DUSER_SETUP_LOADED",
+      "-DST7789_DRIVER=1",
+      "-DTFT_WIDTH=170",
+      "-DTFT_HEIGHT=320",
+      "-DTFT_INVERSION_ON",
+      "-DTFT_RGB_ORDER=1",
+      "-DTFT_BL=21",
+      "-DTFT_CS=41",
+      "-DTFT_DC=16",
+      "-DTFT_RST=40",
+      "-DTFT_MOSI=9",
+      "-DTFT_SCLK=11",
+      "-DTFT_MISO=10",
+      "-DSPI_FREQUENCY=80000000",
+      "-DSPI_READ_FREQUENCY=20000000",
+      "-DHAS_ENCODER",
+      "-DENCODER_INA=4",
+      "-DENCODER_INB=5",
+      "-DENCODER_KEY=0",
+      "-DBK_BTN=6",
+      "-DBTN_ACT=0",
+      "-DBOARD_HAS_PSRAM",
+      "-DARDUINO_RUNNING_CORE=1",
+      "-DARDUINO_EVENT_RUNNING_CORE=1",
+      "-DARDUINO_USB_MODE=1",
+      "-DARDUINO_USB_CDC_ON_BOOT=1",
+      "-DUSE_CC1101_VIA_SPI",
+      "-DCC1101_GDO0_PIN=3",
+      "-DCC1101_GDO2_PIN=38",
+      "-DCC1101_SW1_PIN=47",
+      "-DCC1101_SW0_PIN=48",
+      "-DCC1101_SS_PIN=12",
+      "-DIR_TX_PIN=2",
+      "-DIR_RX_PIN=1"
+    ],
+    "arduino": {}
+  },
+  "upload": {
+    "maximum_size": 16777216,
+    "maximum_ram_size": 327680,
+    "speed": 921600,
+    "flash_size": "16MB",
+    "require_upload_port": true
+  },
+  "monitor": { "speed": 115200 },
+  "pin_configs": {
+    "ir_pins": {
+      "tx_options": [
+        { "name": "Default", "pin": 2, "description": "Default IR TX pin" },
+        { "name": "GPIO 1", "pin": 1, "description": "GPIO 1" },
+        { "name": "GPIO 3", "pin": 3, "description": "GPIO 3 (CC1101 GDO0)" },
+        { "name": "Grove SDA", "pin": 8, "description": "Grove SDA pin" },
+        { "name": "Grove SCL", "pin": 18, "description": "Grove SCL pin" }
+      ],
+      "rx_options": [
+        { "name": "Default", "pin": 1, "description": "Default IR RX pin" },
+        { "name": "GPIO 2", "pin": 2, "description": "GPIO 2" },
+        { "name": "GPIO 3", "pin": 3, "description": "GPIO 3 (CC1101 GDO0)" },
+        { "name": "Grove SDA", "pin": 8, "description": "Grove SDA pin" },
+        { "name": "Grove SCL", "pin": 18, "description": "Grove SCL pin" }
+      ]
+    },
+    "rf_pins": {
+      "tx_options": [
+        { "name": "CC1101 Default", "pin": 3, "description": "CC1101 GDO0 pin (built-in)" },
+        { "name": "GPIO 2", "pin": 2, "description": "GPIO 2" },
+        { "name": "GPIO 1", "pin": 1, "description": "GPIO 1" },
+        { "name": "Grove SDA", "pin": 8, "description": "Grove SDA pin" },
+        { "name": "Grove SCL", "pin": 18, "description": "Grove SCL pin" }
+      ],
+      "rx_options": [
+        { "name": "CC1101 Default", "pin": 3, "description": "CC1101 GDO0 pin (built-in)" },
+        { "name": "GPIO 1", "pin": 1, "description": "GPIO 1" },
+        { "name": "GPIO 2", "pin": 2, "description": "GPIO 2" },
+        { "name": "Grove SDA", "pin": 8, "description": "Grove SDA pin" },
+        { "name": "Grove SCL", "pin": 18, "description": "Grove SCL pin" }
+      ]
+    },
+    "cc1101_pins": {
+      "gdo0": 3,
+      "gdo2": 38,
+      "sw0": 48,
+      "sw1": 47,
+      "ss": 12,
+      "mosi": 9,
+      "miso": 10,
+      "sck": 11
+    }
+  }
+}

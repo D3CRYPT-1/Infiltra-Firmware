@@ -1,0 +1,89 @@
+{
+  "name": "LilyGo T-Embed (ESP32-S3)",
+  "url": "https://lilygo.cc/products/t-embed",
+  "vendor": "LilyGo",
+  "frameworks": ["arduino"],
+  "connectivity": ["wifi", "bluetooth"],
+  "build": {
+    "core": "esp32",
+    "mcu": "esp32s3",
+    "variant": "esp32s3",
+    "f_cpu": "240000000L",
+    "f_flash": "80000000L",
+    "flash_mode": "qio",
+    "partitions": "huge_app.csv",
+    "extra_flags": [
+      "-DT_EMBED",
+      "-DLILYGO_T_EMBED",
+      "-DUSER_SETUP_LOADED",
+      "-DST7789_DRIVER=1",
+      "-DTFT_WIDTH=170",
+      "-DTFT_HEIGHT=320",
+      "-DTFT_INVERSION_ON",
+      "-DTFT_RGB_ORDER=1",
+      "-DTFT_BL=15",
+      "-DTFT_CS=10",
+      "-DTFT_DC=13",
+      "-DTFT_RST=9",
+      "-DTFT_MOSI=11",
+      "-DTFT_SCLK=12",
+      "-DTFT_MISO=-1",
+      "-DSPI_FREQUENCY=40000000",
+      "-DSPI_READ_FREQUENCY=20000000",
+      "-DHAS_ENCODER",
+      "-DENCODER_INA=2",
+      "-DENCODER_INB=1",
+      "-DENCODER_KEY=0",
+      "-DBK_BTN=0",
+      "-DBTN_ACT=0",
+      "-DBOARD_HAS_PSRAM",
+      "-DARDUINO_RUNNING_CORE=1",
+      "-DARDUINO_EVENT_RUNNING_CORE=1",
+      "-DARDUINO_USB_MODE=1",
+      "-DARDUINO_USB_CDC_ON_BOOT=1"
+    ],
+    "arduino": {}
+  },
+  "upload": {
+    "maximum_size": 16777216,
+    "maximum_ram_size": 327680,
+    "speed": 921600,
+    "flash_size": "16MB",
+    "require_upload_port": true
+  },
+  "monitor": { "speed": 115200 },
+  "pin_configs": {
+    "ir_pins": {
+      "tx_options": [
+        { "name": "Default", "pin": 44, "description": "Default IR TX pin" },
+        { "name": "Grove SDA", "pin": 44, "description": "Grove SDA pin" },
+        { "name": "Grove SCL", "pin": 43, "description": "Grove SCL pin" },
+        { "name": "GPIO 2", "pin": 2, "description": "GPIO 2" },
+        { "name": "GPIO 1", "pin": 1, "description": "GPIO 1" }
+      ],
+      "rx_options": [
+        { "name": "Default", "pin": 43, "description": "Default IR RX pin" },
+        { "name": "Grove SDA", "pin": 44, "description": "Grove SDA pin" },
+        { "name": "Grove SCL", "pin": 43, "description": "Grove SCL pin" },
+        { "name": "GPIO 2", "pin": 2, "description": "GPIO 2" },
+        { "name": "GPIO 1", "pin": 1, "description": "GPIO 1" }
+      ]
+    },
+    "rf_pins": {
+      "tx_options": [
+        { "name": "Default", "pin": 44, "description": "Default RF TX pin" },
+        { "name": "Grove SDA", "pin": 44, "description": "Grove SDA pin" },
+        { "name": "Grove SCL", "pin": 43, "description": "Grove SCL pin" },
+        { "name": "GPIO 2", "pin": 2, "description": "GPIO 2" },
+        { "name": "GPIO 1", "pin": 1, "description": "GPIO 1" }
+      ],
+      "rx_options": [
+        { "name": "Default", "pin": 43, "description": "Default RF RX pin" },
+        { "name": "Grove SDA", "pin": 44, "description": "Grove SDA pin" },
+        { "name": "Grove SCL", "pin": 43, "description": "Grove SCL pin" },
+        { "name": "GPIO 2", "pin": 2, "description": "GPIO 2" },
+        { "name": "GPIO 1", "pin": 1, "description": "GPIO 1" }
+      ]
+    }
+  }
+}
