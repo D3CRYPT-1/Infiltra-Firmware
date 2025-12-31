@@ -57,11 +57,11 @@ Built by a dedicated community of **hackers, developers, and security enthusiast
 ### ⚠️ **Important: Backup Your Device Before Flashing!**
 
 ### 1️⃣ **Download the Latest Release**
-- Visit our **[GitHub Releases](https://github.com/lilbricky101/Signal-X-Firmware/releases)** page.
+- Visit our **[GitHub Releases](https://github.com/D3CRYPT-1/Infiltra-Firmware/releases)** page.
 - Download the appropriate **Infiltra Firmware** package for your device.
 
 ### 2️⃣ **Flash the Firmware**
-- Use our **[WebFlasher](https://infiltra.xyz)** for a seamless flashing experience.
+- Use our **[WebFlasher](https://infiltra.co)** for a seamless flashing experience.
 - Follow device-specific flashing instructions for Flipper Zero, M5Stick, Cardputer, and others.
 
 ---
